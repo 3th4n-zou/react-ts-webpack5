@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 function Demo2() {
   return (
@@ -8,4 +8,4 @@ function Demo2() {
   )
 }
 
-export default Demo2;
+export default Demo2

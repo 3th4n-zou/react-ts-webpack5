@@ -1,9 +1,7 @@
-import React from "react";
+import React from 'react'
 
 function PrefetchDemo() {
-  return (
-      <h3>我是PrefetchDemo组件</h3>
-  );
+  return <h3>我是PrefetchDemo组件</h3>
 }
 
-export default PrefetchDemo;
+export default PrefetchDemo
