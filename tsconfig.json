@@ -18,6 +18,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react", // react18这里也可以改成react-jsx
+    "experimentalDecorators": true, // 开启装饰器支持
   },
   "include": [
     "./src"
