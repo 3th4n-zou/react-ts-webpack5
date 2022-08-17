@@ -1,3 +1,5 @@
+const isDEV = process.env.NODE_ENV === 'development'; // 是否为开发模式
+
 module.exports = {
   'presets': [
     [
@@ -16,6 +18,7 @@ module.exports = {
     "@babel/preset-typescript",
   ],
   'plugins': [
+    isDEV && require.resolve('react-refresh/babel'),  // 如果是开发模式，启动react热更新插件
     ['@babel/plugin-proposal-decorators', { 'legacy': true }]
-  ]
+  ].filter(Boolean) // 过滤空值
 };
