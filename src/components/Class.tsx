@@ -1,4 +1,6 @@
-import React, { PureComponent } from 'react'
+/** @format */
+
+import React, {PureComponent} from 'react'
 
 // 装饰器，为组件添加age属性
 function addAge(Target: Function) {

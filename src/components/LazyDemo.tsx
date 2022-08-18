@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function LazyDemo() {
   return (
@@ -8,4 +8,4 @@ function LazyDemo() {
   )
 }
 
-export default LazyDemo;
+export default LazyDemo
