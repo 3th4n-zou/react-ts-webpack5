@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "__tests__/**/*",
+    "typings/*.d.ts",
+    "babel.config.js",
+    "jest.setup.ts"
+  ],
+  "exclude": [
+    "src/**/*.js"
+  ]
+}

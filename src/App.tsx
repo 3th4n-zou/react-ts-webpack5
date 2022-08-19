@@ -22,38 +22,44 @@ import bigImg from '@/assets/imgs/22kb.png';
 import '@/app.scss';
 import { Demo1, Demo2 } from '@/components';
 
-const LazyDemo = lazy(() => import('@/components/LazyDemo'))  // 使用import语法配合react的lazy动态引入资源
+const LazyDemo = lazy(() => import('@/components/LazyDemo')); // 使用import语法配合react的lazy动态引入资源
 
 // prefetch
-const PrefetchDemo = lazy(() => import(
-  /* webpackChunkName: "PrefetchDemo" */
-  /* webpackPrefetch: true */
-  '@/components/PrefetchDemo'
-))
+const PrefetchDemo = lazy(
+  () =>
+    import(
+      /* webpackChunkName: "PrefetchDemo" */
+      /* webpackPrefetch: true */
+      '@/components/PrefetchDemo'
+    )
+);
 
 // preload
-const PreloadDemo = lazy(() => import(
-  /* webpackChunkName: "PreloadDemo" */
-  /* webpackPreload: true */
-  '@/components/PreloadDemo'
-))
+const PreloadDemo = lazy(
+  () =>
+    import(
+      /* webpackChunkName: "PreloadDemo" */
+      /* webpackPreload: true */
+      '@/components/PreloadDemo'
+    )
+);
 
 function App() {
-  const [ count, setCounts ] = useState('');
+  const [count, setCounts] = useState('');
   const onChange = (e: any) => {
-    setCounts(e.target.value)
-  }
+    setCounts(e.target.value);
+  };
 
-  const [ show, setShow ] = useState(false)
+  const [show, setShow] = useState(false);
   const onClick = () => {
-    import ('./app.css');
+    import('./app.css');
     setShow(true);
-  }
+  };
 
-  const [ showPreload, setShowPreload ] = useState(false);
+  const [showPreload, setShowPreload] = useState(false);
   const onClickPreload = () => {
     setShowPreload(true);
-  }
+  };
 
   return (
     <>
