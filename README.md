@@ -153,3 +153,10 @@ import(
   './module'
 );
 ```
+
+
+
+# eslint + prettier + react + ts + airbnb
+```
+https://gist.github.com/EliEladElrom/54c5046cf21877824d1bc38d5dd33d81
+```
