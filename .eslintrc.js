@@ -1,30 +1,69 @@
 module.exports = {
-  parser: '@typescript-eslint/parser', // 定义eslint解析器
-  extends: ['prettier', 'plugin:prettier/recommended'],
-  // extends: [
-  //   'plugin:react/recommended',
-  //   'plugin:@typescript-eslint/recommended',
-  // ], // 定义文件继承的子规范
-  // plugins: ['@typescript-eslint'], // 定义了该eslint文件所依赖的插件
-  env: {
-    // 制定代码运行环境
-    browser: true,
-    node: true,
+  plugins: ['prettier', '@typescript-eslint'],
+  extends: ['airbnb-typescript', 'react-app', 'prettier'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json',
   },
   settings: {
-    // 自动发现react的版本，从而进行规范react代码
-    react: {
-      pragma: 'React',
-      version: 'detect',
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
     },
   },
-  parserOptions: {
-    // 指定eslint可以解析JSX语法
-    ecmaVersion: 2019,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
+  rules: {
+    'object-curly-spacing': ['warn', 'always'],
+    'no-unused-vars': [
+      'warn',
+      {
+        vars: 'all',
+        args: 'none',
+      },
+    ],
+    '@typescript-eslint/semi': ['off'],
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        vars: 'all',
+        args: 'none',
+      },
+    ],
+    '@typescript-eslint/no-explicit-any': [
+      'error',
+      {
+        ignoreRestArgs: true,
+      },
+    ],
+    'max-len': [
+      'warn',
+      {
+        code: 80,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreComments: true,
+      },
+    ],
+    'no-plusplus': [
+      'error',
+      {
+        allowForLoopAfterthoughts: true,
+      },
+    ],
+    'react/jsx-key': 'error',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: ['**/*.test.js', '**/*.test.jsx', '**/*.test.ts', '**/*.test.tsx', 'src/tests/**/*'],
+      },
+    ],
+    'react/jsx-props-no-spreading': 'off',
+    'import/prefer-default-export': 'off',
+    'react/jsx-boolean-value': 'off',
+    'react/prop-types': 'off',
+    'react/no-unescaped-entities': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'react/jsx-wrap-multilines': 'off',
+    'react/destructuring-assignment': 'off',
   },
-  rules: {},
 }

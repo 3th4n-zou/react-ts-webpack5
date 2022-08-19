@@ -16,13 +16,13 @@
 
 // export default App
 
-import React, { lazy, Suspense, useState } from 'react';
-import smallImg from '@/assets/imgs/5kb.png';
-import bigImg from '@/assets/imgs/22kb.png';
-import '@/app.scss';
-import { Demo1, Demo2 } from '@/components';
+import React, { lazy, Suspense, useState } from 'react'
+import smallImg from '@/assets/imgs/5kb.png'
+import bigImg from '@/assets/imgs/22kb.png'
+import '@/app.scss'
+import { Demo1, Demo2 } from '@/components'
 
-const LazyDemo = lazy(() => import('@/components/LazyDemo')); // 使用import语法配合react的lazy动态引入资源
+const LazyDemo = lazy(() => import('@/components/LazyDemo')) // 使用import语法配合react的lazy动态引入资源
 
 // prefetch
 const PrefetchDemo = lazy(
@@ -32,7 +32,7 @@ const PrefetchDemo = lazy(
       /* webpackPrefetch: true */
       '@/components/PrefetchDemo'
     )
-);
+)
 
 // preload
 const PreloadDemo = lazy(
@@ -42,24 +42,24 @@ const PreloadDemo = lazy(
       /* webpackPreload: true */
       '@/components/PreloadDemo'
     )
-);
+)
 
 function App() {
-  const [count, setCounts] = useState('');
+  const [count, setCounts] = useState('')
   const onChange = (e: any) => {
-    setCounts(e.target.value);
-  };
+    setCounts(e.target.value)
+  }
 
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false)
   const onClick = () => {
-    import('./app.css');
-    setShow(true);
-  };
+    import('./app.css')
+    setShow(true)
+  }
 
-  const [showPreload, setShowPreload] = useState(false);
+  const [showPreload, setShowPreload] = useState(false)
   const onClickPreload = () => {
-    setShowPreload(true);
-  };
+    setShowPreload(true)
+  }
 
   return (
     <>
@@ -93,7 +93,7 @@ function App() {
         </>
       )}
     </>
-  );
+  )
 }
 
-export default App;
+export default App
