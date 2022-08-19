@@ -1393,6 +1393,13 @@
   dependencies:
     "@types/webpack" "^4"
 
+"@types/stylelint@^14.0.0":
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/@types/stylelint/-/stylelint-14.0.0.tgz#496503f0a25cab7fc69aca92b329860a8fa93a1a"
+  integrity sha512-0eFbWemetFjcDiBBKne7QJBfdicxdmdJ1qGMye3sDYe7mCh8EfuovjkUTg6zXvYhJcWBhIIQnC6bmFYjpYetgQ==
+  dependencies:
+    stylelint "*"
+
 "@types/tapable@^1":
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.8.tgz#b94a4391c85666c7b73299fd3ad79d4faa435310"
@@ -5497,7 +5504,7 @@ stylelint-config-standard@^27.0.0:
   dependencies:
     stylelint-config-recommended "^9.0.0"
 
-stylelint@^14.10.0:
+stylelint@*, stylelint@^14.10.0:
   version "14.10.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-14.10.0.tgz#c588f5cd47cd214cf1acee5bc165961b6a3ad836"
   integrity sha512-VAmyKrEK+wNFh9R8mNqoxEFzaa4gsHGhcT4xgkQDuOA5cjF6CaNS8loYV7gpi4tIZBPUyXesotPXzJAMN8VLOQ==
